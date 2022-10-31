@@ -1,0 +1,20 @@
+{
+    "workbench.colorCustomizations": {
+        "activityBar.background": "#053606",
+        "titleBar.activeBackground": "#074C08",
+        "titleBar.activeForeground": "#F2FEF3"
+    },
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": " vga.cz0cxtjkdphj.ap-south-1.rds.amazonaws.com",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "database": "coodeit",
+            "username": "sa",
+            "password": "sa123456",
+            "connectionTimeout": 60,
+            "name": "coodeit"
+        }
+    ]
+}
