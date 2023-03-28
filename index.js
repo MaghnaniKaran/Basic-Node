@@ -4,9 +4,9 @@ const app = express();
 const morgan = require("morgan");
 const RootRouter = require("./route");
 
-app.use(RootRouter);
 app.use(express.json());
 app.use(morgan("dev"));
+app.use(RootRouter);
 
 app.listen(process.env.PORT, () => {
   console.log(

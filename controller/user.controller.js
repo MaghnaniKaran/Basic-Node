@@ -4,7 +4,6 @@ const UserService = require("../services/user.service");
 
 UserController.post("/add", async (req, res, next) => {
   const savedUser = await UserService.save(req.body);
-  console.log(req.body)
   res.status(200).send({
     res: savedUser,
   });
@@ -17,21 +16,21 @@ UserController.get("/list", async (req, res, next) => {
   });
 });
 
-UserController.put("/", async (req, res, next) => {
+UserController.put("/update", async (req, res, next) => {
   const updatedUser = await UserService.put(req.body);
   res.status(200).send({
     res: updatedUser,
   });
 });
 
-UserController.delete("/:id", async (req, res, next) => {
+UserController.delete("/delete/:id", async (req, res, next) => {
   const deletedUser = await UserService.remove(req.params.id);
   res.status(200).send({
     res: deletedUser,
   });
 });
 
-UserController.get("/:id", async (req, res, next) => {
+UserController.get("/byId/:id", async (req, res, next) => {
   const id = req.params.id;
   const getByIdResponse = await UserService.getById(id);
   res.status(200).send({

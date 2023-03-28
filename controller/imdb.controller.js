@@ -10,7 +10,7 @@ ImdbController.get("/get-all-videos", async (req, res, next) => {
     headers: {
       "X-RapidAPI-Key": "d82c0dddc0msh542b45b3747e37ap1032a6jsn5f7eb45c36de",
       "X-RapidAPI-Host": "imdb8.p.rapidapi.com",
-    },
+    }, 
   };
 
   let data = fetch(url,options)
